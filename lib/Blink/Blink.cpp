@@ -8,5 +8,8 @@ Blink::Blink(int p1, int t = 0){
 }
 
 void Blink::doTask(){
-
+  digitalWrite(ledPin1, HIGH);
+  delay(interval);
+  digitalWrite(ledPin1, LOW);
+  delay(interval);
 }

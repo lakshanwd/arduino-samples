@@ -1,13 +1,18 @@
 #include <Arduino.h>
 #include <Swap.h>
+#include <Blink.h>
 
-Swap *swp;
+Swap *swap;
+Blink *blink;
 
 void setup(){
-  Swap swp(6,10,500);
-  ::swp = &swp;
+  Swap swap(6,10,500);
+  ::swap = &swap;
+  Blink blink(3,200);
+  ::blink = &blink;
 }
 
 void loop(){
-  swp->doTask();
+  swap->doTask();
+  blink->doTask();
 }

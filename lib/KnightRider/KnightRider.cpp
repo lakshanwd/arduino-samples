@@ -42,9 +42,9 @@ void KnightRider::doTask(){
   }
 
   for(int i=(arraySize - 1); i >= 0; i--){
-    analogWrite(ledPins[getFwdPin(i+2)],getBrightness(0));
-    analogWrite(ledPins[getFwdPin(i+1)],getBrightness(1));
-    analogWrite(ledPins[getFwdPin(i+0)],getBrightness(2));
+    analogWrite(ledPins[getBwdPin(i+2)],getBrightness(0));
+    analogWrite(ledPins[getBwdPin(i+1)],getBrightness(1));
+    analogWrite(ledPins[getBwdPin(i+0)],getBrightness(2));
     if(i != 0){
       delay(interval);
     }
